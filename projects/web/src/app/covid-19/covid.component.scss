@@ -4,10 +4,30 @@
   @include full-width-height();
 }
 
+.data {
+  position: absolute; 
+  background: #4cd3c2;
+  top: 0;
+  left: 0;
+  width: 300px;
+  margin: 10px; 
+  padding: 10px;
+  border-radius: 5px; 
+
+  hr {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    font-size: 13px;
+  }
+}
+
 #tooltip {
     position: absolute; 
     background: #4cd3c2;
     margin: 10px; 
-    padding: 10px;
+    padding: 5px;
     border-radius: 5px;
 }

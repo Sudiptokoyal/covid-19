@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rm -rf dist coverage",
     "ng": "ng",
-    "build": "ng build --prod --base-href=/ng-deck-gl/",
+    "build": "ng build --prod --base-href https://sudiptokoyal.github.io/covid-19/",
     "lint": "ng lint",
     "start": "ng serve -o",
     "test": "ng test --watch",
