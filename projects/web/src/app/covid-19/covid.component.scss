@@ -5,14 +5,14 @@
 }
 
 .data {
-  position: absolute; 
+  position: absolute;
   background: #4cd3c2;
   top: 0;
   left: 0;
   width: 300px;
-  margin: 10px; 
+  margin: 10px;
   padding: 10px;
-  border-radius: 5px; 
+  border-radius: 5px;
 
   hr {
     margin: 0;
@@ -25,9 +25,10 @@
 }
 
 #tooltip {
-    position: absolute; 
-    background: #4cd3c2;
-    margin: 10px; 
-    padding: 5px;
-    border-radius: 5px;
+  position: absolute;
+  background: #4cd3c2;
+  margin: 10px;
+  padding: 5px;
+  width: 250px;
+  border-radius: 5px;
 }

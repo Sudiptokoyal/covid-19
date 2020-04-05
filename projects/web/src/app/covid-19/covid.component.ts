@@ -20,7 +20,7 @@ declare var deck: any;
 })
 export class CovidComponent implements OnInit, OnDestroy {
     private animationFrame: number;
-
+    public data: any;
     constructor(
         private zone: NgZone,
         private http: HttpClient,
@@ -39,6 +39,7 @@ export class CovidComponent implements OnInit, OnDestroy {
             this._apiServ.get('locations')
                 .subscribe(res => {
                     console.log(res);
+                    this.data = res;
                     // this.addScatterplot(map, res.locations);
                     this.addScatterplot(map, res.locations);
                     // this.addHeatMapPlot(map, res.locations);
@@ -65,7 +66,7 @@ export class CovidComponent implements OnInit, OnDestroy {
             data: data,
             opacity: 0.8,
             filled: true,
-            radiusMinPixels: 10,
+            radiusMinPixels: 15,
             radiusMaxPixels: 50,
             getPosition: d => [parseInt(d.coordinates.longitude), parseInt(d.coordinates.latitude)],
             getFillColor: d => this.getColor(parseInt(d.latest.confirmed)),
@@ -125,14 +126,14 @@ export class CovidComponent implements OnInit, OnDestroy {
         map.addLayer(hexplot);
     }
 
-    private getColor(noOfDeaths: number): any[] {
-        if(noOfDeaths < 100) {
+    private getColor(confirmedCases: number): any[] {
+        if(confirmedCases < 100) {
             return [255, 180, 0, 150];
-        } else if(noOfDeaths < 500) {
+        } else if(confirmedCases < 500) {
             return [255, 150, 0, 150];
-        } else if(noOfDeaths < 100) {
+        } else if(confirmedCases < 100) {
             return [255, 110, 0, 150];
-        } else if(noOfDeaths < 5000) {
+        } else if(confirmedCases < 5000) {
             return [255, 70, 0, 150];
         } else {
             return [255, 0, 0, 150];
