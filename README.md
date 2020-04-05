@@ -38,6 +38,12 @@ Seed project build with [Angular](https://angular.io/), [Font Awesome](https://f
 
   5. Happy coding!.
 
+  6. Publish to github pages
+
+      ```shell
+      ngh --dir /dist/web
+     ```
+
 PS: the `master` branch use `angular-cli` .
 
 - if you want to use `rollup` to do aot build and tree shaking, please check out the
